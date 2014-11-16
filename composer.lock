@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6ac1818ec68652159c0703a388633ab5",
+    "hash": "56a891d8911bde3ba5cf61f86e7fc0e7",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -114,31 +114,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "rogeriopradoj/codeigniter",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rogeriopradoj/codeigniter-composer.git",
-                "reference": "b7531bf34347a8b37277a713a2e6cc28dba369e6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rogeriopradoj/codeigniter-composer/zipball/b7531bf34347a8b37277a713a2e6cc28dba369e6",
-                "reference": "b7531bf34347a8b37277a713a2e6cc28dba369e6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "OSL-3.0"
-            ],
-            "description": "A way to install CodeIgniter via composer",
-            "time": "2014-11-03 11:33:53"
         }
     ],
     "packages-dev": [
