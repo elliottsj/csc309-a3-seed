@@ -48,10 +48,21 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+/*
+ * Parse the DATABASE_URL MySQL URI.
+ * Stolen from <https://devcenter.heroku.com/articles/cleardb#using-cleardb-with-php>
+ */
+$url=parse_url(getenv("DATABASE_URL"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+
+$db['default']['hostname'] = $server;
+$db['default']['username'] = $username;
+$db['default']['password'] = $password;
+$db['default']['database'] = $db;
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
