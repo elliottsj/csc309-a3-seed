@@ -95,6 +95,18 @@ xdebug.remote_enable=1
 
 https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-9eaa1cf6
 
+```shell
+ssh -L 2000:localhost:2000 ubuntu@<PUBLIC_IP>
+```
+
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/dokku-alt/dokku-alt/master/bootstrap.sh)"
+```
+
+Open <http://localhost:2000>
+
 ```
 $ heroku create
 $ git push heroku master
