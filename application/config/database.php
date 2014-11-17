@@ -57,15 +57,15 @@ if (!$database_url)
 	throw new Exception('Must set a DATABASE_URL environment variable');
 $url=parse_url(getenv("DATABASE_URL"));
 $server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
+$username = isset($url["user"]) ? $url["user"] : '';
+$password = isset($url["pass"]) ? $url["pass"] : '';
+$database = substr($url["path"], 1);
 
 
-$db['default']['hostname'] = $server;
+$db['default']['hostname'] = $server === 'localhost' ? '127.0.0.1' : $server;
 $db['default']['username'] = $username;
 $db['default']['password'] = $password;
-$db['default']['database'] = $db;
+$db['default']['database'] = $database;
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
