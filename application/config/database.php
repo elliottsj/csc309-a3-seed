@@ -52,6 +52,9 @@ $active_record = TRUE;
  * Parse the DATABASE_URL MySQL URI.
  * Stolen from <https://devcenter.heroku.com/articles/cleardb#using-cleardb-with-php>
  */
+$database_url = getenv("DATABASE_URL");
+if (!$database_url)
+	throw new Exception('Must set a DATABASE_URL environment variable');
 $url=parse_url(getenv("DATABASE_URL"));
 $server = $url["host"];
 $username = $url["user"];
