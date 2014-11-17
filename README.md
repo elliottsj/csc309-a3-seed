@@ -17,7 +17,7 @@ Start your MySQL server, then run the following:
 
 ```shell
 composer install
-export DATABASE_URL=""
+export DATABASE_URL="mysql://root@localhost/estore"
 php -S localhost:4000
 ```
 
